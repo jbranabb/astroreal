@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, avoid_print
 
+import 'package:astroreal/pages/home/TabView/tab_one.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -154,7 +155,10 @@ class HomePage extends StatelessWidget {
               ),
             )),
         body: TabBarView(
+
           children: [
+            MyTabBarView1(),
+            MyTabBarView1(),
             MyTabBarView1(),
           ],
         ),
@@ -163,16 +167,3 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class MyTabBarView1 extends StatelessWidget {
-  const MyTabBarView1({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('dasa'),
-      // child: Text('pingnie'),
-    );
-  }
-}
