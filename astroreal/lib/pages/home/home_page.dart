@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, avoid_print
 
-import 'package:astroreal/pages/home/TabView/tab_one.dart';
+import 'package:astroreal/pages/home/TabView/tab1/tab_one.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';

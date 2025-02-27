@@ -58,8 +58,9 @@ flutter:
     - assets/lottie/onboarding3.json
     - assets/lottie/loading.json
     - assets/lottie/a1.json
-    - assets/lottie/b.json
+    - assets/lottie/backdropfilter.json
     - assets/images/google.png
+    - assets/images/qris.png
     - assets/svg/svg1.svg
     - assets/svg/svg2.svg
     - assets/svg/svg3.svg
