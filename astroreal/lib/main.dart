@@ -1,4 +1,7 @@
-import 'package:astroreal/data/bloc/onboarding_cubit.dart';
+import 'package:astroreal/data/bloc/onboarding/onboarding_cubit.dart';
+import 'package:astroreal/data/bloc/wallets_bar/bloc/container_bloc.dart';
+// import 'package:astroreal/data/bloc/wallets_bar/bloc/container_bloc.dart';
+import 'package:astroreal/data/bloc/wallets_bar/container_cubit.dart';
 import 'package:astroreal/pages/auth/login/login.dart';
 import 'package:astroreal/pages/home/home_page.dart';
 import 'package:astroreal/pages/onboarding/onboarding.dart';
@@ -17,7 +20,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => OnboardingCubit(),)
+        BlocProvider(create: (context) => OnboardingCubit(),),
+        BlocProvider(create: (context) => ContainerBloc(),),
       ],
         child: MaterialApp(
           theme: ThemeData(

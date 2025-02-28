@@ -1,13 +1,29 @@
-
-import 'package:flutter/cupertino.dart';
+// import 'package:astroreal/data/bloc/wallets_bar/bloc/container_bloc.dart';
+import 'package:astroreal/data/bloc/wallets_bar/bloc/container_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 
-class MyChartBar extends StatelessWidget {
+class MyChartBar extends StatefulWidget {
   const MyChartBar({
     super.key,
   });
 
+  @override
+  State<MyChartBar> createState() => _MyChartBarState();
+}
+
+class _MyChartBarState extends State<MyChartBar> {
+
+     @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    context.read<ContainerBloc>().add(ResetEvent());
+    Future.delayed(const Duration(milliseconds: 200), (){
+    context.read<ContainerBloc>().add(EventIncome(newValue: 70));
+    context.read<ContainerBloc>().add(EventExpenses(newValue: 30));
+    });
+   }  
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -16,8 +32,7 @@ class MyChartBar extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(14),
-            border: Border.all(
-                style: BorderStyle.solid, color: Colors.grey)),
+            border: Border.all(style: BorderStyle.solid, color: Colors.grey)),
         child: Column(
           children: [
             Row(
@@ -30,8 +45,7 @@ class MyChartBar extends StatelessWidget {
                         Container(
                           height: 8,
                           width: 8,
-                          decoration: const BoxDecoration(
-                              color: Colors.green),
+                          decoration: const BoxDecoration(color: Colors.blue),
                         ),
                         const Gap(2),
                         const Text('Income'),
@@ -39,8 +53,7 @@ class MyChartBar extends StatelessWidget {
                     ),
                     const Text(
                       'Rp1.200.00',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
@@ -59,8 +72,7 @@ class MyChartBar extends StatelessWidget {
                         Container(
                           height: 8,
                           width: 8,
-                          decoration: const BoxDecoration(
-                              color: Colors.red),
+                          decoration: const BoxDecoration(color: Colors.red),
                         ),
                         const Gap(2),
                         const Text('Expenses'),
@@ -68,33 +80,30 @@ class MyChartBar extends StatelessWidget {
                     ),
                     const Text(
                       'Rp200.00',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
               ],
             ),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Balance'),
-                Gap(5),
+                const Text('Balance'),
+                const Gap(5),
                 Text(
                   'Rp1.000.000',
                   style: TextStyle(
-                      color: Colors.green,
-                      fontWeight: FontWeight.bold),
+                      color: Colors.blue.shade700, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
             Container(
-              height:
-                  90, // Beri ketinggian fixed untuk container
+              height: 90, // Beri ketinggian fixed untuk container
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment
-                    .end, // Pastikan semua konten rata bawah
+                mainAxisAlignment:
+                    MainAxisAlignment.end, // Pastikan semua konten rata bawah
                 children: [
                   // Bar charts
                   Row(
@@ -103,33 +112,42 @@ class MyChartBar extends StatelessWidget {
                         .end, // Penting! Ini membuat bar mulai dari bawah
                     children: [
                       const SizedBox(width: 10),
-                      Container(
-                        height: 80, // Tinggi bar income
-                        width: 25,
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(5),
-                              topRight: Radius.circular(5)),
-                          color: Colors.green,
-                        ),
+                      BlocBuilder<ContainerBloc, ContainerState>(
+                        builder: (context, income) {
+                          return AnimatedContainer(
+                            duration: Durations.extralong2,
+                            height: income.heightA, // Tinggi bar income
+                            width: 25,
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(5),
+                                  topRight: Radius.circular(5)),
+                              color: Colors.blue,
+                            ),
+                          );
+                        },
                       ),
                       const SizedBox(width: 15),
-                      Container(
-                        height:
-                            20, // Tinggi bar expenses (lebih pendek)
-                        width: 25,
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(5),
-                              topRight: Radius.circular(5)),
-                          color: Colors.red,
-                        ),
+                      BlocBuilder<ContainerBloc,ContainerState>(
+                        builder: (context, state) {
+                          return AnimatedContainer(
+                            duration: Durations.extralong2,
+                            height: state.heightB, // Tinggi bar expenses (lebih pendek)
+                            width: 25,
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(5),
+                                  topRight: Radius.circular(5)),
+                              color: Colors.red,
+                            ),
+                          );
+                        },
                       ),
                       const SizedBox(width: 10),
                     ],
                   ),
-                  const SizedBox(
-                      height: 2), // Jarak antara bar dan divider
+                  // const SizedBox(
+                  //     height: 2), // Jarak antara bar dan divider
                   // Divider selalu di bawah
                   Container(
                     width: 140,
@@ -160,8 +178,7 @@ class MyFinancialAndPeriod extends StatelessWidget {
         children: [
           Text(
             'Youre financial recap',
-            style: TextStyle(
-                fontSize: 14, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
           ),
           Row(
             children: [
@@ -174,8 +191,7 @@ class MyFinancialAndPeriod extends StatelessWidget {
               Gap(3),
               Text(
                 '1 Feb 2025 - 27 Feb 2025',
-                style: TextStyle(
-                    fontSize: 11, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
               ),
             ],
           ),

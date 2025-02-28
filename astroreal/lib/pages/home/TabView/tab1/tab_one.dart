@@ -1,15 +1,33 @@
+// ignore_for_file: avoid_print
+
 import 'package:astroreal/pages/home/TabView/widget/menu_button.dart';
 import 'package:astroreal/pages/home/TabView/widget/my_chart.dart';
 import 'package:astroreal/pages/home/TabView/widget/mydebit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 
-class MyTabBarView1 extends StatelessWidget {
+class MyTabBarView1 extends StatefulWidget {
   const MyTabBarView1({
     super.key,
   });
+
+  @override
+  State<MyTabBarView1> createState() => _MyTabBarView1State();
+}
+
+
+class _MyTabBarView1State extends State<MyTabBarView1> {
+  @override
+  void didUpdateWidget(covariant MyTabBarView1 oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    print('did udpate');
+  }
+
+ 
   @override
   Widget build(BuildContext context) {
+    // print('build');
     double univesalSizeHorizontal = 10;
     double univesalSizeHeigh = 130;
     var widthBody = MediaQuery.of(context).size.width;
@@ -52,7 +70,8 @@ class MyTabBarView1 extends StatelessWidget {
                       univesalSizeHorizontal: univesalSizeHorizontal),
                   const Gap(5),
                   const MyFinancialAndPeriod(),
-                  const MyChartBar(),
+                   MyChartBar(
+                   ),
                   const MyMenuButtonAndTop(),
                 ],
               ),
