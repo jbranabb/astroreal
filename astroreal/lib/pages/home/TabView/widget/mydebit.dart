@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
 class MyDebits extends StatelessWidget {
@@ -21,20 +22,40 @@ class MyDebits extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          height: univesalSizeHeigh,
-          width: widthBody * 0.85,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: ClipRRect(
-              borderRadius: BorderRadius.circular(23),
-              child: SizedBox(
-                height: univesalSizeHeigh,
-                width: widthBody * 0.85,
-                child: LottieBuilder.asset(
-                  fit: BoxFit.fill,
-                  'assets/lottie/backdropfilter.json'))),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: univesalSizeHeigh,
+              width: widthBody * 0.85,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Stack(
+                children: [
+                  ClipRRect(
+                      borderRadius: BorderRadius.circular(23),
+                      child: SizedBox(
+                          height: univesalSizeHeigh,
+                          width: widthBody * 0.85,
+                          child: LottieBuilder.asset(
+                              fit: BoxFit.fill,
+                              'assets/lottie/backdropfilter.json'))),
+                  Positioned(
+                    top: 47,
+                    left: 10,
+                    child:  Text(
+                      '1023 3212 1232 6754',
+                      style: GoogleFonts.firaCode(
+                        textStyle: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white12)
+                      ) 
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
         SizedBox(
           height: univesalSizeHeigh,

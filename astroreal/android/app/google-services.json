@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "414321291386",
+    "project_id": "astroreal-e7628",
+    "storage_bucket": "astroreal-e7628.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414321291386:android:f16d608ce656fa77e30bc3",
+        "android_client_info": {
+          "package_name": "com.example.astroreal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbyM4VMBVpwtXveo5VRGR3XjLF1dmZ93c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

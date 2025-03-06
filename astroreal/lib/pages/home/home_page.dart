@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors, avoid_print
 
 import 'package:astroreal/pages/home/TabView/tab1/tab_one.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:astroreal/pages/home/TabView/tab_there.dart';
+import 'package:astroreal/pages/home/TabView/tab_two.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -17,7 +18,7 @@ class HomePage extends StatelessWidget {
       animationDuration: Durations.long1,
       child: Scaffold(
         appBar: AppBar(
-          toolbarHeight: 50,
+            toolbarHeight: 50,
             flexibleSpace: SafeArea(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -27,31 +28,42 @@ class HomePage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       // mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text('AstroReal', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 19),),
-                      Row(
-                        children: [
-                          OutlinedButton(
-                            
-                            style: OutlinedButton.styleFrom(
-                              padding: EdgeInsets.symmetric(horizontal: 2, vertical: 2),
-                              minimumSize: Size(10, 10),
-                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                            ),
-                            onPressed: (){}, child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                
-                              children: const [
-                                Icon(Icons.logout, size: 12,),
-                                Gap(2),
-                                Text('Log out', style: TextStyle(fontSize: 10),)
-                              ],
-                                                        ),
-                            ))
-                        ],
-                      )
-                    ],
+                      children: [
+                        Text(
+                          'AstroReal',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 19),
+                        ),
+                        Row(
+                          children: [
+                            OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 2, vertical: 2),
+                                  minimumSize: Size(10, 10),
+                                  tapTargetSize:
+                                      MaterialTapTargetSize.shrinkWrap,
+                                ),
+                                onPressed: () {},
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
+                                    children: const [
+                                      Icon(
+                                        Icons.logout,
+                                        size: 12,
+                                      ),
+                                      Gap(2),
+                                      Text(
+                                        'Log out',
+                                        style: TextStyle(fontSize: 10),
+                                      )
+                                    ],
+                                  ),
+                                ))
+                          ],
+                        )
+                      ],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,7 +76,7 @@ class HomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(40),
                                 child: InkWell(
-                                borderRadius: BorderRadius.circular(40),
+                                  borderRadius: BorderRadius.circular(40),
                                   onTap: () {
                                     print('iwods');
                                   },
@@ -73,43 +85,50 @@ class HomePage extends StatelessWidget {
                                     width: 30,
                                     child: Image.network(
                                         fit: BoxFit.cover,
-                                        'https://randomuser.me/api/portraits/men/10.jpg'),
+                                        'https://reqres.in/img/faces/7-image.jpg'),
                                   ),
                                 ),
                               ),
                             ),
-                            Text('Hi',style: TextStyle(fontSize: 13),),
+                            Text(
+                              'Hi',
+                              style: TextStyle(fontSize: 13),
+                            ),
                             Gap(4),
-                            Text('User Example', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),), 
+                            Text(
+                              'User Example',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 13),
+                            ),
                           ],
                         ),
-                         Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
                             Transform.scale(
                               scale: 1.4,
                               child: IconButton(
-                                style: IconButton.styleFrom(
-                                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                                  minimumSize: Size(5, 5),
-                                  iconSize: 18
-                                ),
-                                onPressed: (){},
-                                icon: Icon(Icons.notifications_none_rounded)),
+                                  style: IconButton.styleFrom(
+                                      tapTargetSize:
+                                          MaterialTapTargetSize.shrinkWrap,
+                                      minimumSize: Size(5, 5),
+                                      iconSize: 18),
+                                  onPressed: () {},
+                                  icon: Icon(Icons.notifications_none_rounded)),
                             ),
                             Transform.scale(
                               scale: 1.4,
                               child: IconButton(
-                                style: IconButton.styleFrom(
-                                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                                  minimumSize: Size(5, 5),
-                                  iconSize: 18
-                                ),
-                                onPressed: (){},
-                                icon: Icon(Icons.receipt_long_outlined)),
+                                  style: IconButton.styleFrom(
+                                      tapTargetSize:
+                                          MaterialTapTargetSize.shrinkWrap,
+                                      minimumSize: Size(5, 5),
+                                      iconSize: 18),
+                                  onPressed: () {},
+                                  icon: Icon(Icons.receipt_long_outlined)),
                             ),
-                              ],
-                            )
+                          ],
+                        )
                       ],
                     ),
                   ],
@@ -130,7 +149,8 @@ class HomePage extends StatelessWidget {
                     splashBorderRadius: BorderRadius.circular(20),
                     unselectedLabelColor: Colors.grey,
                     labelColor: Colors.white,
-                    labelStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                    labelStyle:
+                        TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                     indicatorPadding:
                         EdgeInsets.only(left: 2, top: 6, right: 2, bottom: 6),
                     tabAlignment: TabAlignment.fill,
@@ -138,16 +158,17 @@ class HomePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.black),
                     dividerColor: Colors.transparent,
-                    unselectedLabelStyle: TextStyle(fontWeight: FontWeight.normal),
+                    unselectedLabelStyle:
+                        TextStyle(fontWeight: FontWeight.normal),
                     tabs: const [
                       Center(
-                        child: Text('Insight'),
+                        child: Text('Wallets'),
                       ),
                       Center(
-                        child: Text('Grow'),
+                        child: Text('Home'),
                       ),
                       Center(
-                        child: Text('Modals'),
+                        child: Text('Todos'),
                       ),
                     ],
                   ),
@@ -155,15 +176,13 @@ class HomePage extends StatelessWidget {
               ),
             )),
         body: TabBarView(
-
           children: [
             MyTabBarView1(),
-            MyTabBarView1(),
-            MyTabBarView1(),
+            MyTabBarView2(widthMe: widthMe),
+            MyTabBarView3(),
           ],
         ),
       ),
     );
   }
 }
-

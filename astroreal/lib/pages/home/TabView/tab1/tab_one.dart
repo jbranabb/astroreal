@@ -4,7 +4,6 @@ import 'package:astroreal/pages/home/TabView/widget/menu_button.dart';
 import 'package:astroreal/pages/home/TabView/widget/my_chart.dart';
 import 'package:astroreal/pages/home/TabView/widget/mydebit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 
 class MyTabBarView1 extends StatefulWidget {
@@ -19,11 +18,6 @@ class MyTabBarView1 extends StatefulWidget {
 
 class _MyTabBarView1State extends State<MyTabBarView1> {
   @override
-  void didUpdateWidget(covariant MyTabBarView1 oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    print('did udpate');
-  }
-
  
   @override
   Widget build(BuildContext context) {
@@ -70,7 +64,7 @@ class _MyTabBarView1State extends State<MyTabBarView1> {
                       univesalSizeHorizontal: univesalSizeHorizontal),
                   const Gap(5),
                   const MyFinancialAndPeriod(),
-                   MyChartBar(
+                   const MyChartBar(
                    ),
                   const MyMenuButtonAndTop(),
                 ],

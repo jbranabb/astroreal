@@ -1,5 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers, sort_child_properties_last, avoid_print
-
+// ignore_for_file: avoid_unnecessary_containers, sort_child_properties_last, avoid_printimport 'package:astroreal/pages/auth/login/login.dart';
 import 'package:astroreal/data/bloc/onboarding/onboarding_cubit.dart';
 import 'package:astroreal/pages/auth/login/login.dart';
 import 'package:astroreal/pages/widgets/onboarding/onboarding.dart';
@@ -108,6 +107,6 @@ class _OnBoardingState extends State<OnBoarding> {
               ))
         ],
       ),
-    );
+  );
   }
 }

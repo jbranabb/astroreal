@@ -118,11 +118,11 @@ class _MyChartBarState extends State<MyChartBar> {
                             duration: Durations.extralong2,
                             height: income.heightA, // Tinggi bar income
                             width: 25,
-                            decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.only(
+                            decoration: BoxDecoration(
+                              borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(5),
                                   topRight: Radius.circular(5)),
-                              color: Colors.blue,
+                              color: Colors.blue.shade800,
                             ),
                           );
                         },
@@ -134,11 +134,11 @@ class _MyChartBarState extends State<MyChartBar> {
                             duration: Durations.extralong2,
                             height: state.heightB, // Tinggi bar expenses (lebih pendek)
                             width: 25,
-                            decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.only(
+                            decoration: BoxDecoration(
+                              borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(5),
                                   topRight: Radius.circular(5)),
-                              color: Colors.red,
+                              color: Colors.red.shade600,
                             ),
                           );
                         },
