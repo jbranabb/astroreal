@@ -22,8 +22,9 @@ class _MyTabBarView1State extends State<MyTabBarView1> {
   @override
   Widget build(BuildContext context) {
     // print('build');
+    var height = MediaQuery.of(context).size.height;
     double univesalSizeHorizontal = 10;
-    double univesalSizeHeigh = 130;
+    double univesalSizeHeigh = height * 0.20;
     var widthBody = MediaQuery.of(context).size.width;
     var heightBody = MediaQuery.of(context).size.height;
     return SafeArea(
