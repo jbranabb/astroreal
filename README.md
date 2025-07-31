@@ -131,42 +131,42 @@ The application uses various multimedia assets:
 
 <h3>Onboarding Experience (Lottie)</h3> 
 <p align="center">
-  <img src="assets/screenshots/onboarding_11.png" alt="Onboarding Screen 1" width="30%"/>
+  <img src="assets/screenshoot/11.png" alt="Onboarding Screen 1" width="30%"/>
   &nbsp;
-  <img src="assets/screenshots/onboarding_12.png" alt="Onboarding Screen 2" width="30%"/>
+  <img src="assets/screenshoot/12.png" alt="Onboarding Screen 2" width="30%"/>
   &nbsp;
-  <img src="assets/screenshots/onboarding_13.png" alt="Onboarding Screen 3" width="30%"/>
+  <img src="assets/screenshoot/13.png" alt="Onboarding Screen 3" width="30%"/>
 </p>
 
 ---
 
 <h3>Login & Register </h3>
 <p align="center">
-  <img src="assets/screenshots/1.png" alt="Login Page" width="45%"/>
+  <img src="assets/screenshoot/1.png" alt="Login Page" width="45%"/>
   &nbsp;
-  <img src="assets/screenshots/5.png" alt="Register Page" width="45%"/>
+  <img src="assets/screenshoot/5.png" alt="Register Page" width="45%"/>
 </p>
 
 ---
 
 <h3>Forgot Passwords </h3>
 <p align="center">
-  <img src="assets/screenshots/2.png" alt="Wallets Tab" width="30%"/>
+  <img src="assets/screenshoot/2.png" alt="Wallets Tab" width="30%"/>
   &nbsp;
-  <img src="assets/screenshots/3.png" alt="Home Tab" width="30%"/>
+  <img src="assets/screenshoot/3.png" alt="Home Tab" width="30%"/>
   &nbsp;
-  <img src="assets/screenshots/4.png" alt="Todos Tab" width="30%"/>
+  <img src="assets/screenshoot/4.png" alt="Todos Tab" width="30%"/>
 </p>
 
 ---
 
 <h3>Main Navigation Tabs</h3>
 <p align="center">
-  <img src="assets/screenshots/8.png" alt="Wallets Tab" width="30%"/>
+  <img src="assets/screenshoot/8.png" alt="Wallets Tab" width="30%"/>
   &nbsp;
-  <img src="assets/screenshots/6.png" alt="Home Tab" width="30%"/>
+  <img src="assets/screenshoot/6.png" alt="Home Tab" width="30%"/>
   &nbsp;
-  <img src="assets/screenshots/7.png" alt="Todos Tab" width="30%"/>
+  <img src="assets/screenshoot/7.png" alt="Todos Tab" width="30%"/>
 </p>
 
 ---
